@@ -8,9 +8,8 @@
              x:Class="GradientButtonDemo.MainPage">
 
     <StackLayout>
-        <controls:GradientButton WidthRequest="200"
-                                 HeightRequest="200"
-                                 Visual="Material" 
+        <controls:GradientButton WidthRequest="150"
+                                 HeightRequest="50"
                                  VerticalOptions="CenterAndExpand"
                                  HorizontalOptions="Center"
                                  BorderRadius="{Binding RadiusTest}"

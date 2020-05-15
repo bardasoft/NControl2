@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradientButtonDemo.Android"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradientButtonDemo.iOS", "GradientButtonDemo\GradientButtonDemo.iOS\GradientButtonDemo.iOS.csproj", "{C068A5AA-01AA-4C28-9119-27E6523B0CA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradientButtonDemo", "GradientButtonDemo\GradientButtonDemo\GradientButtonDemo.csproj", "{C263E1BA-6176-4841-9A5C-C60E0F54E47A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GradientButtonDemo", "GradientButtonDemo\GradientButtonDemo\GradientButtonDemo.csproj", "{C263E1BA-6176-4841-9A5C-C60E0F54E47A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

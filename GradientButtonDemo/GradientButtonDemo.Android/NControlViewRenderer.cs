@@ -25,6 +25,7 @@
  *
  ************************************************************************/
 
+using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using NControl.Abstractions;
@@ -35,18 +36,22 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-#pragma warning disable CS0612 // Type or member is obsolete
 [assembly: ExportRenderer(typeof(NControlView), typeof(NControlViewRenderer))]
-#pragma warning restore CS0612 // Type or member is obsolete
 namespace NControl.Droid
 {
     /// <summary>
     /// NControlView renderer.
     /// </summary>
     [Preserve(AllMembers = true)]
-    [Obsolete]
+
     public class NControlViewRenderer : VisualElementRenderer<NControlView>
     {
+
+        public NControlViewRenderer(Context context) : base(context)
+        {
+
+        }
+
         /// <summary>
         /// Used for registration with dependency service
         /// </summary>
