@@ -18,8 +18,6 @@ namespace GradientButtonDemo
             InitializeComponent();
             BindingContext = new
             {
-                TextTest = "Login",
-                RadiusTest = 100.0f,
                 GradientStyle = "linear-gradient(37deg, rgb(32, 218, 233),rgb(40, 21, 236))",
                 Command = new Command(() =>
                 {

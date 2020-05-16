@@ -1,21 +1,130 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:controls="clr-namespace:GradientButtonDemo.MyControls"
-             mc:Ignorable="d"
-             x:Class="GradientButtonDemo.MainPage">
+<ContentPage
+    x:Class="GradientButtonDemo.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:GradientButtonDemo.MyControls"
+    xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+    Visual="Material"
+    BackgroundColor="Black"
+    mc:Ignorable="d">
 
-    <StackLayout>
-        <controls:GradientButton WidthRequest="150"
-                                 HeightRequest="50"
-                                 VerticalOptions="CenterAndExpand"
-                                 HorizontalOptions="Center"
-                                 BorderRadius="{Binding RadiusTest}"
-                                 Text="{Binding TextTest}"
-                                 GradientStyle="{Binding GradientStyle}"
-                                 Command="{Binding Command}"/>
-    </StackLayout>
+    <Grid>
+
+        <controls:GradientPanel
+            Margin="10"
+            GradientStyle="linear-gradient(90deg, rgb(114, 7, 74),rgb(232, 54, 104))"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" />
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <controls:GradientPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="20,30,20,0"
+                Text="CONTROLES CON FONDOS DEGRADADOS"
+                GradientStyle="linear-gradient(22.5deg, rgba(221, 221, 221, 0.04) 0%, rgba(221, 221, 221, 0.04) 56%,rgba(7, 7, 7, 0.04) 56%, rgba(7, 7, 7, 0.04) 100%),linear-gradient(112.5deg, rgba(227, 227, 227, 0.04) 0%, rgba(227, 227, 227, 0.04) 14%,rgba(56, 56, 56, 0.04) 14%, rgba(56, 56, 56, 0.04) 100%),linear-gradient(45deg, rgba(39, 39, 39, 0.04) 0%, rgba(39, 39, 39, 0.04) 34%,rgba(196, 196, 196, 0.04) 34%, rgba(196, 196, 196, 0.04) 100%),linear-gradient(0deg, rgba(20, 20, 20, 0.04) 0%, rgba(20, 20, 20, 0.04) 84%,rgba(75, 75, 75, 0.04) 84%, rgba(75, 75, 75, 0.04) 100%),linear-gradient(90deg, rgb(175, 31, 79),rgb(201, 35, 98))"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="30,0,0,10"
+                TextColor="White"
+                FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="StartAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Start"
+                FontSize="Medium"
+                Text="Usuario:" />
+
+            <controls:GradientEntry
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="30,0,30,0"
+                Opacity="0.5" />
+
+            <Label
+                Grid.Row="4"
+                Grid.Column="0"
+                Margin="30,10,0,0"
+                TextColor="White"
+                FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="StartAndExpand"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Start"
+                FontSize="Medium"
+                Text="Contraseña:" />
+
+            <Frame
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="30,0,30,0"
+                Padding="0"
+                CornerRadius="15">
+
+                <controls:CustomEntry
+                    Visual="Default"
+                    TextColor="Black"
+                    PlaceholderColor="Accent"
+                    BackgroundColor="White"
+                    Placeholder="password" />
+            </Frame>
+
+
+            <controls:GradientButton
+                Grid.Row="7"
+                Grid.Column="0"
+                Margin="30,0,0,0"
+                WidthRequest="150"
+                HeightRequest="50"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                BorderRadius="20"
+                Text="ACEPTAR"
+                GradientStyle="linear-gradient(0deg, rgb(4, 6, 4),rgb(86, 73, 252))"
+                Command="{Binding Command}" />
+
+            <controls:GradientButton
+                Grid.Row="7"
+                Grid.Column="1"
+                Margin="0,0,0,0"
+                WidthRequest="150"
+                HeightRequest="50"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                BorderRadius="20"
+                Text="CANCELAR"
+                GradientStyle="linear-gradient(0deg, rgb(94, 5, 4),rgb(253, 19, 61))"
+                Command="{Binding Command}" />
+
+        </Grid>
+    </Grid>
 
 </ContentPage>
